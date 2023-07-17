@@ -70,8 +70,9 @@ window.addEventListener("resize", () => {
  */
 const mouse = new THREE.Vector2();
 
-window.addEventListener("mousemove", () => {
-  console.log("mouse moved");
+window.addEventListener("mousemove", (event) => {
+    mouse.x = event.clientX / sizes.width * 2 - 1;
+    mouse.y = - (event.clientY / sizes.height) * 2 + 1;
 });
 
 /**
