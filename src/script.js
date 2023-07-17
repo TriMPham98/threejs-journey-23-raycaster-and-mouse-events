@@ -66,6 +66,15 @@ window.addEventListener("resize", () => {
 });
 
 /**
+ * Mouse
+ */
+const mouse = new THREE.Vector2();
+
+window.addEventListener("mousemove", () => {
+  console.log("mouse moved");
+});
+
+/**
  * Camera
  */
 // Base camera
@@ -105,23 +114,23 @@ const tick = () => {
   object2.position.y = Math.sin(elapsedTime * 0.6) * 1.5;
   object3.position.y = Math.sin(elapsedTime * 0.9) * 1.5;
 
-//   // Cast a ray
-//   const rayOrigin = new THREE.Vector3(-3, 0, 0);
-//   const rayDirection = new THREE.Vector3(1, 0, 0);
-//   rayDirection.normalize();
+  //   // Cast a ray
+  //   const rayOrigin = new THREE.Vector3(-3, 0, 0);
+  //   const rayDirection = new THREE.Vector3(1, 0, 0);
+  //   rayDirection.normalize();
 
-//   raycaster.set(rayOrigin, rayDirection);
+  //   raycaster.set(rayOrigin, rayDirection);
 
-//   const objectsToTest = [object1, object2, object3];
-//   const intersects = raycaster.intersectObjects(objectsToTest);
+  //   const objectsToTest = [object1, object2, object3];
+  //   const intersects = raycaster.intersectObjects(objectsToTest);
 
-//   for (const object of objectsToTest) {
-//     object.material.color.set("#ff0000");
-//   }
+  //   for (const object of objectsToTest) {
+  //     object.material.color.set("#ff0000");
+  //   }
 
-//   for (const intersect of intersects) {
-//     intersect.object.material.color.set("#0000ff");
-//   }
+  //   for (const intersect of intersects) {
+  //     intersect.object.material.color.set("#0000ff");
+  //   }
 
   // Update controls
   controls.update();
