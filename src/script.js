@@ -116,6 +116,8 @@ const tick = () => {
   object3.position.y = Math.sin(elapsedTime * 0.9) * 1.5;
 
   //   // Cast a ray
+  raycaster.setFromCamera(mouse, camera);
+  
   //   const rayOrigin = new THREE.Vector3(-3, 0, 0);
   //   const rayDirection = new THREE.Vector3(1, 0, 0);
   //   rayDirection.normalize();
