@@ -7,6 +7,7 @@ THREE.ColorManagement.enabled = false;
 /**
  * Base
  */
+
 // Debug
 const gui = new dat.GUI();
 
@@ -78,6 +79,7 @@ window.addEventListener("mousemove", (event) => {
 /**
  * Camera
  */
+
 // Base camera
 const camera = new THREE.PerspectiveCamera(
   75,
