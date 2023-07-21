@@ -124,8 +124,9 @@ const gltfLoader = new GLTFLoader();
 let model = null;
 
 gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
-  gltf.scene.position.y = -1.2;
-  scene.add(gltf.scene);
+  model = gltf.scene;
+  model.position.y = -1.2;
+  scene.add(model);
 });
 
 /**
@@ -183,7 +184,7 @@ const tick = () => {
   }
 
   // Test intersect with a model
-  const modelIntersects = raycaster.intersectObject(gltf.scene);
+  const modelIntersects = raycaster.intersectObject(model.scene);
 
   // Update controls
   controls.update();
