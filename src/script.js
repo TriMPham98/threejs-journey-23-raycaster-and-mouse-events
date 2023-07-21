@@ -184,7 +184,9 @@ const tick = () => {
   }
 
   // Test intersect with a model
-  const modelIntersects = raycaster.intersectObject(model.scene);
+  if (model) {
+    const modelIntersects = raycaster.intersectObject(model);
+  }
 
   // Update controls
   controls.update();
