@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import * as dat from "lil-gui";
 
 THREE.ColorManagement.enabled = false;
@@ -117,10 +117,14 @@ renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-/** 
+/**
  * Model
  */
 const gltfLoader = new GLTFLoader();
+
+gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", () => {
+  console.log("loaded");
+});
 
 /**
  * Animate
