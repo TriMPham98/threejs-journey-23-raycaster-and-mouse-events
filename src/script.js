@@ -121,6 +121,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  * Model
  */
 const gltfLoader = new GLTFLoader();
+let model = null;
 
 gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
   gltf.scene.position.y = -1.2;
@@ -180,6 +181,9 @@ const tick = () => {
     }
     currentIntersect = null;
   }
+
+  // Test intersect with a model
+  const modelIntersects = raycaster.intersectObject(gltf.scene);
 
   // Update controls
   controls.update();
