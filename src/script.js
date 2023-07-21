@@ -123,11 +123,12 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const gltfLoader = new GLTFLoader();
 
 gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
+  gltf.scene.position.y = -1.2;
   scene.add(gltf.scene);
 });
 
 /**
- * Lights 
+ * Lights
  */
 
 // Ambient light
