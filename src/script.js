@@ -127,6 +127,15 @@ gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
 });
 
 /**
+ * Lights 
+ */
+// Ambient light
+const ambientLIght = new THREE.AmbientLight("#ffffff", 0.3);
+scene.add(ambientLIght);
+
+
+
+/**
  * Animate
  */
 const clock = new THREE.Clock();
