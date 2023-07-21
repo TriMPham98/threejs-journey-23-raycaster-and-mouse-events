@@ -122,8 +122,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  */
 const gltfLoader = new GLTFLoader();
 
-gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", () => {
-  console.log("loaded");
+gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
+  scene.add(gltf.scene);
 });
 
 /**
