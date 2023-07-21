@@ -129,11 +129,15 @@ gltfLoader.load("./models/Duck/glTF-Binary/Duck.glb", (gltf) => {
 /**
  * Lights 
  */
+
 // Ambient light
 const ambientLIght = new THREE.AmbientLight("#ffffff", 0.3);
 scene.add(ambientLIght);
 
-
+// Directional light
+const directionalLIght = new THREE.DirectionalLight("#ffffff", 0.7);
+directionalLIght.position.set(1, 2, 3);
+scene.add(directionalLIght);
 
 /**
  * Animate
