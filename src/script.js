@@ -186,6 +186,12 @@ const tick = () => {
   // Test intersect with a model
   if (model) {
     const modelIntersects = raycaster.intersectObject(model);
+
+    if (modelIntersects.length) {
+      model.scale.set(1.5, 1.5, 1.5);
+    } else {
+      model.scale.set(1, 1, 1);
+    }
   }
 
   // Update controls
